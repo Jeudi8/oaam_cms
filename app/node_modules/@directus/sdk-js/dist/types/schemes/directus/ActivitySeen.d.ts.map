@@ -1,0 +1,1 @@
+{"version":3,"file":"ActivitySeen.d.ts","sourceRoot":"","sources":["../../../../src/schemes/directus/ActivitySeen.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,MAAM,WAAW,aAAa;IAC5B,EAAE,EAAE,MAAM,CAAC;IACX,QAAQ,EAAE,MAAM,CAAC;IACjB,IAAI,EAAE,MAAM,CAAC;IACb,OAAO,EAAE,IAAI,CAAC;IACd,QAAQ,EAAE,OAAO,CAAC;CACnB"}

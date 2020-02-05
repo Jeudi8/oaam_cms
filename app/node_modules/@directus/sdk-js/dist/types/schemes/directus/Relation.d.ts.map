@@ -1,0 +1,1 @@
+{"version":3,"file":"Relation.d.ts","sourceRoot":"","sources":["../../../../src/schemes/directus/Relation.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,MAAM,WAAW,SAAS;IACxB,EAAE,EAAE,MAAM,CAAC;IACX,eAAe,EAAE,MAAM,CAAC;IACxB,UAAU,EAAE,MAAM,CAAC;IACnB,cAAc,EAAE,MAAM,CAAC;IACvB,SAAS,EAAE,MAAM,CAAC;IAClB,cAAc,EAAE,MAAM,CAAC;CACxB"}
