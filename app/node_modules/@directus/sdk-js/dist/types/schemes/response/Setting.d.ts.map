@@ -1,1 +1,0 @@
-{"version":3,"file":"Setting.d.ts","sourceRoot":"","sources":["../../../../src/schemes/response/Setting.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,YAAY,EAAE,MAAM,gBAAgB,CAAC;AAC5D,OAAO,EAAE,QAAQ,EAAE,MAAM,qBAAqB,CAAC;AAE/C;;GAEG;AACH,MAAM,WAAW,gBAAiB,SAAQ,YAAY,CAAC,QAAQ,CAAC;CAAG;AAEnE;;GAEG;AACH,MAAM,WAAW,iBAAkB,SAAQ,YAAY,CAAC,QAAQ,EAAE,EAAE,YAAY,CAAC;CAAG"}

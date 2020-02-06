@@ -9,5 +9,7 @@
 # Ignore all local history of files
 .history
 
-### Directus data ###
-/data
+### Project data ###
+node_modules
+/data/*
+/app/*
