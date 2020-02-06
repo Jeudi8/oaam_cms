@@ -1,22 +1,4 @@
-/*
-This file can be updated to setup default table/user/file/etc..
-*/
-const { SDK } = require('@directus/sdk-js');
-const client = new SDK();
-
-(async () => {
-  // connect
-  try {
-    await client.login({
-      url: 'http://localhost:8765',
-      project: 'directus',
-      email: 'admin@oman.com',
-      password: 'admin@oman.com',
-    });
-  } catch (err) {
-    throw err;
-  }
-
+module.exports.createMuseumAdmin = async client => {
   // create a role for the museum administrator
   try {
     await client.createRole({
@@ -49,6 +31,5 @@ const client = new SDK();
   } catch (err) {
     console.error('user already exist');
   }
-
   return;
-})();
+};
