@@ -1,3 +1,13 @@
-ib_logfile0
-ib_logfile1
-ibdata1
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
+### Directus data ###
+/data
