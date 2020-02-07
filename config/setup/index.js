@@ -2,25 +2,26 @@
 This file can be updated to setup default table/user/file/etc..
 */
 const { SDK } = require('@directus/sdk-js');
+const log = require('../log');
 const user = require('./user');
 
-const client = new SDK();
+module.exports = async () => {
+  const client = new SDK();
 
-(async () => {
   // connect
   try {
     await client.login({
-      url: 'http://localhost:8765',
-      project: 'directus',
-      email: 'admin@oman.com',
-      password: 'admin@oman.com',
+      url: process.env.OAAM_CMS_HOST,
+      project: process.env.OAAM_CMS_PROJECT,
+      email: process.env.OAAM_ADMIN_MAIL,
+      password: process.env.OAAM_ADMIN_PWD,
     });
   } catch (err) {
-    throw err;
+    return log.error(`Network error. ${err}`);
   }
 
-  // create a user and role for the museum administrator
-  await user.createMuseumAdmin(client);
+  // create a user and role for the museum
+  await user.setupEditor(client);
 
-  return;
-})();
+  return await client.logout();
+};

@@ -7,34 +7,44 @@ Installation, deployment, requirement about Directus CMS and your App.
 ## Project Structure
 
 - ./app (_your final app go here_)
+- ./config (_nodejs process to setup, build and deploy for every projects_)
 - ./data (_data from directus_)
-- ./setup (_setup default users/tables/files/etc.. for every projects_)
-- ./docker-compose.yaml (_docker procedure_)
+- ./dist (_created on the fly and final folder of your build_)
+- .env (_environnement variables for nodejs_)
+- .gitignore
+- docker-compose.yaml (_docker procedure_)
+- package.json
+- README.INSTALL.md (_installation procedure for the museum_)
+- README.md
+
+## Requirement
+
+- all os : nodejs, yarn (optionnal).
+- linux : docker, docker-compose.
+- windows and macos : docker desktop.
+
+Don't forget, your app will be deployed on Windows 10 professionnal.
 
 ## Installation
 
-- install Docker. Follow the official procedure for your OS. Don't forget, your app will be deployed on
-  windows 10 professionnal.
 - start docker and wait until its running.
-- open a terminal and navigate to your folder.
-- enter command `docker-compose pull`
-- enter command `docker-compose up -d`
+- cd to `./oman-cms`.
+- `docker-compose pull`
+- `docker-compose up -d`
 - wait until containers are up, check this by running `docker ps`
-- enter command : `docker-compose run directus install --email admin@oman.com --password admin@oman.com`
-  (_default admin for everyone, can be override after installation done_)
-- navigate to `cd ./setup`
-- enter command `yarn install` or `npm install`
-- enter command `yarn setup` or `npm run setup`
-- open your web-browser
-- nagivate to (http://localhost:8765)
-- sign in with : admin@oman.com (email and pwd).
+- `docker-compose run directus install --email admin@oaam.com --password admin@oaam.com` (don't override
+  it for now)
+- `yarn install` or `npm install`
+- `yarn setup` or `npm run setup`
+- open your web-browser and go to http://localhost:8765
+- sign in with admin@oaam.com (email and pwd).
 
 ## CMS
 
 ###### Scripts
 
 - start : `docker-compose up`
-- start in deamon mode: `docker-compose up -d`
+- deamon mode : `docker-compose up -d`
 - stop : `docker-compose stop`
 
 ###### Docs
@@ -44,15 +54,19 @@ Installation, deployment, requirement about Directus CMS and your App.
   [RESTful and GraphQL request](https://docs.directus.io/api/reference.html). Directus provide a
   [javascript SDK](https://docs.directus.io/guides/js-sdk.html#installation) also.
 
-###### Museum administrator
+###### Users and roles
 
-- The admin and role from the museum is already created (user "Museum Admin", role "Museum
-  Administrator"). Don't forget to give him access to whatever he can change in your app.
+- Be aware that the defaults logins can changes.
+- Administrator (you) : default administrator for every project. It can be overrided in Directus but you
+  will have to update it in .env file (OAAM_ADMIN_MAIL, OAAM_ADMIN_PWD) with your new values. We will not
+  recommended to do so, in case we have to access the CMS on site.
+- OAAM Editor: the editor from the museum is already created (user "editor@oaam.com"). Don't forget to
+  give him permissions/restrictions to whatever he can change or not in your app.
 
 ## Build and Deploy
 
-- build your .exe app.
-- past your app and its assets in ./app folder.
-- enter command : `cd ./config`
-- enter command : `yarn build --app your-app-id` or `npm run build --app your-app-id`
-- this while create a .zip file in ./dist folder (in root project).
+- Build your .exe app.
+- Past your app installer in ./app folder.
+- Set your appId in .env file (OAAM_APP_ID).
+- `yarn build` or `npm run build`
+- This while create a .zip file in ./dist folder.

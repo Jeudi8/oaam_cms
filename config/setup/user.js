@@ -1,17 +1,20 @@
-module.exports.createMuseumAdmin = async client => {
-  // create a role for the museum administrator
+const log = require('../log');
+
+module.exports.setupEditor = async client => {
+  // create role
+  let role = null;
   try {
     await client.createRole({
-      name: 'Museum Administrator',
+      name: 'OAAM Editor',
       description: 'Access restricted to managed data',
     });
   } catch (err) {
-    console.error('role already exist');
+    log.error('OAAM Editor role already exist');
   }
 
-  // create a user for the museum administrator
+  // create user
   try {
-    let role = (await client.getRoles()).data.filter(obj => obj.name === 'Museum Administrator');
+    role = (await client.getRoles({ filter: { name: 'OAAM Editor' } })).data;
     role = role.length ? role[0] : null;
     if (role) {
       await client.api.request(
@@ -19,17 +22,18 @@ module.exports.createMuseumAdmin = async client => {
         '/users',
         {},
         {
-          first_name: 'Museum Admin',
-          last_name: 'User',
-          email: 'museum@oman.com',
-          password: 'museum@oman.com',
+          first_name: 'Editor',
+          last_name: 'OAAM',
+          email: 'editor@oaam.com',
+          password: 'editor@oaam.com',
           role: role.id,
           status: 'active',
         },
       );
     }
   } catch (err) {
-    console.error('user already exist');
+    log.error('OAAM Editor user already exist');
   }
+
   return;
 };

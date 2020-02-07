@@ -10,6 +10,8 @@
 .history
 
 ### Project data ###
+yarn.lock
+package.lock
 node_modules
 /data/*
 /app/*
