@@ -1,4 +1,4 @@
-# Oman Museum CMS
+# OAAM CMS
 
 ## Description
 
@@ -12,7 +12,7 @@ Installation, deployment, requirement about Directus CMS and your App.
 - ./dist (_created on the fly and final folder of your build_)
 - .env (_environnement variables for nodejs_)
 - .gitignore
-- docker-compose.yaml (_docker procedure_)
+- docker-compose.yaml
 - package.json
 - README.INSTALL.md (_installation procedure for the museum_)
 - README.md
