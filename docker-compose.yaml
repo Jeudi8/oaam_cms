@@ -15,7 +15,8 @@ services:
       - ./data/db:/var/lib/mysql
 
   directus:
-    image: directus/directus:v8-apache
+    # image: directus/directus:v8-apache
+    build: ./config
     ports:
       - "8765:80"
     environment:

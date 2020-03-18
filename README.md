@@ -17,7 +17,7 @@ Installation, deployment, requirement about Directus CMS and your App.
 - README.INSTALL.md (_installation procedure for the museum_)
 - README.md
 
-## Requirement
+## Installation requirement
 
 - all os : nodejs, yarn (optionnal).
 - linux : docker, docker-compose.
@@ -38,6 +38,13 @@ Don't forget, your app will be deployed on Windows 10 professionnal.
 - `yarn setup` or `npm run setup`
 - open your web-browser and go to http://localhost:8765
 - sign in with admin@oaam.com (email and pwd).
+
+## Update
+
+- start docker and wait until its running.
+- cd to `./oman-cms`.
+- `docker-compose pull`
+- `docker-compose up -d`
 
 ## CMS
 
