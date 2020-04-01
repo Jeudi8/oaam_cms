@@ -6,8 +6,8 @@ Installation of an interactive in Oman's Museum.
 
 ## Project Structure
 
-- interactive.exe
-- ./config (_data from CMS, don't touch it_)
+- app-file.exe
+- ./cms (_data from CMS, don't touch it_)
 
 ## Requirement
 
@@ -25,8 +25,6 @@ Docker Desktop, Windows 10 Professionnal.
 
 ## Launch if computer restart
 
-- `cd /cms`
-- `docker-compose up -d`
 - Double click on .exe file
 
 ## Acces the CMS

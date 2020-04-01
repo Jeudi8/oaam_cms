@@ -7,7 +7,7 @@ const log = require('./log');
 const args = process.argv.splice(2);
 
 if (args.length < 1) {
-  log.error('not enough arguments');
+  log.error('Not enough arguments');
   return;
 }
 
@@ -32,6 +32,6 @@ if (args.length < 1) {
         throw err;
       }
     default:
-      log.error(`Process "${args[0]}" not found`);
+      log.error(`Process not found`);
   }
 })();

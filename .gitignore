@@ -11,8 +11,10 @@
 
 ### Project data ###
 yarn.lock
+package-lock.json
 package.lock
 node_modules
+/src/*
+!/src/.gitkeep
 /data/*
-/app/*
-dist
+/dist/

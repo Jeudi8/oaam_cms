@@ -1,7 +1,7 @@
 {
   "name": "oaam-cms",
-  "version": "0.0.3",
-  "description": "setup directus, package your project and deploy it",
+  "version": "0.1.0",
+  "description": "Setup directus, package your project and deploy it",
   "author": "Jeudi8",
   "license": "MIT",
   "main": "./config/index.js",
@@ -17,7 +17,7 @@
     "dotenv": "^8.2.0"
   },
   "oaam": {
-    "app_build": "./src/myApp.exe",
+    "app_build": "./src/myApp setup 0.0.1.exe",
     "app_id": "myApp",
     "dest_package": "./dist",
     "cms_mail": "admin@oaam.com",

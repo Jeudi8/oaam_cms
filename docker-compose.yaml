@@ -16,9 +16,6 @@ services:
 
   directus:
     image: directus/directus:v8-apache
-    volumes: 
-      - ./php.ini:/usr/local/etc/php/conf.d
-    # build: ./config
     ports:
       - "8765:80"
     environment:
@@ -32,6 +29,7 @@ services:
       DIRECTUS_DATABASE_USERNAME: "directus"
       DIRECTUS_DATABASE_PASSWORD: "directus"
     volumes:
+      - ./docker-php-custom.ini:/usr/local/etc/php/conf.d/docker-php-custom.ini
       - ./data/uploads:/var/directus/public/uploads
     depends_on:
       - mysql
