@@ -6,15 +6,12 @@ Installation, deployment, requirement about Directus CMS and your App.
 
 ## Project Structure
 
-- ./app (_your final app go here_)
-- ./config (_nodejs process to setup, build and deploy for every projects_)
+- ./config (_nodejs process to setup, package and deploy for every projects_)
 - ./data (_data from directus_)
-- ./dist (_created on the fly and final folder of your build_)
-- .env (_environnement variables for nodejs_)
+- ./dist (_created on the fly and final folder of your package (app + directus)_)
 - .gitignore
 - docker-compose.yaml
 - package.json
-- README.INSTALL.md (_installation procedure for the museum_)
 - README.md
 
 ## Installation requirement
@@ -28,31 +25,34 @@ Don't forget, your app will be deployed on Windows 10 professionnal.
 ## Installation
 
 - start docker and wait until its running.
-- cd to `./oman-cms`.
+- cd to this folder.
 - `docker-compose pull`
-- `docker-compose up -d`
-- wait until containers are up, check this by running `docker ps`
+- `docker-compose up -d` (wait until containers are up, check this by running `docker ps`)
 - `docker-compose run directus install --email admin@oaam.com --password admin@oaam.com` (don't override
-  it for now)
-- `yarn install` or `npm install`
+  it)
+- `yarn` or `npm install`
 - `yarn setup` or `npm run setup`
-- open your web-browser and go to http://localhost:8765
-- sign in with admin@oaam.com (email and pwd).
 
-## Update
+## Packaging
 
-- start docker and wait until its running.
-- cd to `./oman-cms`.
-- `docker-compose pull`
-- `docker-compose up -d`
+In package.json under "oaam", set your "app_id" and your "app_build" (relative path to your exe file) and run :
+
+- `yarn package` or `npm run package`
+
+This will create a zip file in dist folder. The zip name composed of `<app-id>-<date>.zip`
 
 ## CMS
 
 ###### Scripts
 
 - start : `docker-compose up`
-- deamon mode : `docker-compose up -d`
+- start in deamon mode : `docker-compose up -d`
 - stop : `docker-compose stop`
+
+###### Log in
+
+- open your web-browser and go to http://localhost:8765
+- sign in with admin@oaam.com (email and pwd).
 
 ###### Docs
 
@@ -63,7 +63,6 @@ Don't forget, your app will be deployed on Windows 10 professionnal.
 
 ###### Users and roles
 
-- Be aware that the defaults logins can changes.
 - Administrator (you) : default administrator for every project. It can be overrided in Directus but you
   will have to update it in .env file (OAAM_ADMIN_MAIL, OAAM_ADMIN_PWD) with your new values. We will not
   recommended to do so, in case we have to access the CMS on site.

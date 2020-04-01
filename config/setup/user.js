@@ -1,7 +1,7 @@
 const log = require('../log');
 
 module.exports.setupEditor = async client => {
-  // create role
+  // create Editor role
   let role = null;
   try {
     await client.createRole({
@@ -12,7 +12,7 @@ module.exports.setupEditor = async client => {
     log.error('OAAM Editor role already exist');
   }
 
-  // create user
+  // create Editor user
   try {
     role = (await client.getRoles({ filter: { name: 'OAAM Editor' } })).data;
     role = role.length ? role[0] : null;

@@ -11,10 +11,10 @@ module.exports = async () => {
   // connect
   try {
     await client.login({
-      url: process.env.OAAM_CMS_HOST,
-      project: process.env.OAAM_CMS_PROJECT,
-      email: process.env.OAAM_ADMIN_MAIL,
-      password: process.env.OAAM_ADMIN_PWD,
+      url: process.env.npm_package_oaam_cms_host,
+      project: process.env.npm_package_oaam_cms_project,
+      email: process.env.npm_package_oaam_cms_mail,
+      password: process.env.npm_package_oaam_cms_pwd,
     });
   } catch (err) {
     return log.error(`Network error. ${err}`);

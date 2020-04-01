@@ -1,6 +1,6 @@
 require('dotenv').config();
 const setup = require('./setup');
-const build = require('./build');
+const package = require('./package');
 const deploy = require('./deploy');
 const log = require('./log');
 
@@ -19,9 +19,9 @@ if (args.length < 1) {
       } catch (err) {
         throw err;
       }
-    case 'build':
+    case 'package':
       try {
-        return await build();
+        return await package();
       } catch (err) {
         throw err;
       }

@@ -6,9 +6,8 @@ Installation of an interactive in Oman's Museum.
 
 ## Project Structure
 
-- ./app (_interactive .exe file_)
-- ./data (_data from CMS, don't touch it_)
-- ./docker-compose.yaml (_docker procedure_)
+- interactive.exe
+- ./config (_data from CMS, don't touch it_)
 
 ## Requirement
 
@@ -19,15 +18,16 @@ Docker Desktop, Windows 10 Professionnal.
 - Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
 - Launch it and wait until its running
 - Open a terminal, navigate back here and enter:
+- `cd /cms`
 - `docker-compose pull`
-- `docker-compose up -d`
-- Wait until containers are up, check them by running `docker ps`
-- Double click on .exe file in ./data
+- `docker-compose up -d` (Wait until containers are up, check them by running `docker ps`)
+- Double click on .exe file
 
 ## Launch if computer restart
 
+- `cd /cms`
 - `docker-compose up -d`
-- Double click on .exe file in ./data
+- Double click on .exe file
 
 ## Acces the CMS
 

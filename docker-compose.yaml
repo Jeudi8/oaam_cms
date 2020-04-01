@@ -15,8 +15,10 @@ services:
       - ./data/db:/var/lib/mysql
 
   directus:
-    # image: directus/directus:v8-apache
-    build: ./config
+    image: directus/directus:v8-apache
+    volumes: 
+      - ./php.ini:/usr/local/etc/php/conf.d
+    # build: ./config
     ports:
       - "8765:80"
     environment:

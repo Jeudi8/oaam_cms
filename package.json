@@ -1,19 +1,28 @@
 {
-  "name": "cms-commands",
-  "version": "0.0.2",
-  "description": "setup directus, build your project and deploy it",
-  "author": "Mardi8 - jonathan attar",
+  "name": "oaam-cms",
+  "version": "0.0.3",
+  "description": "setup directus, package your project and deploy it",
+  "author": "Jeudi8",
   "license": "MIT",
   "main": "./config/index.js",
   "private": true,
   "scripts": {
     "setup": "node ./config/index.js setup",
-    "build": "node ./config/index.js build",
+    "package": "node ./config/index.js package",
     "deploy": "node ./config/index.js deploy"
   },
   "dependencies": {
     "@directus/sdk-js": "^6.0.1",
-    "dotenv": "^8.2.0",
-    "zip-dir": "^1.0.2"
+    "adm-zip": "^0.4.14",
+    "dotenv": "^8.2.0"
+  },
+  "oaam": {
+    "app_build": "./src/myApp.exe",
+    "app_id": "myApp",
+    "dest_package": "./dist",
+    "cms_mail": "admin@oaam.com",
+    "cms_pwd": "admin@oaam.com",
+    "cms_host": "http://localhost:8765",
+    "cms_project": "directus"
   }
 }
