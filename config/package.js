@@ -14,7 +14,7 @@ const path = (...names) => join(process.cwd(), ...names);
 
 const files = [
   [path('README.INSTALL.md')],
-  [path('docker-php-custom.ini'), 'cms'],
+  // [path('docker-php-custom.ini'), 'cms'],
   [path('docker-compose.yaml'), 'cms'],
   [path(process.env.npm_package_oaam_app_build)],
 ];
@@ -29,10 +29,10 @@ module.exports = async () => {
   log.success(`Zipping in process, wait...`);
 
   var zip = new AdmZip();
-  files.forEach(file => {
+  files.forEach((file) => {
     zip.addLocalFile(...file);
   });
-  folders.forEach(folder => zip.addLocalFolder(...folder));
+  folders.forEach((folder) => zip.addLocalFolder(...folder));
   zip.writeZip(join(destPath, destFile));
 
   log.success(`Zip ${destFile} ready to deploy`);

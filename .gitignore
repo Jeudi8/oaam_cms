@@ -16,5 +16,6 @@ package.lock
 node_modules
 /src/*
 !/src/.gitkeep
-/data/*
 /dist/
+/data/db
+/data/uploads
