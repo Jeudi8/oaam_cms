@@ -1,3 +1,0 @@
-parcel build ./extensions/interfaces/input.vue -d ./extensions/interfaces --no-source-maps --global __DirectusExtension__
-parcel build ./extensions/interfaces/display.vue -d ./extensions/interfaces --no-source-maps --global __DirectusExtension__
-parcel build ./extensions/modules/module.vue -d ./extensions/modules --no-source-maps --global __DirectusExtension__
