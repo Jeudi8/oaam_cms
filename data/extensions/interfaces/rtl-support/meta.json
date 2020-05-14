@@ -1,0 +1,46 @@
+{
+  "name": "Text Input RTL",
+  "version": "1.0.0",
+  "icon": "text_fields",
+  "types": ["string"],
+  "recommended": {
+    "length": 200
+  },
+  "options": {
+    "placeholder": {
+      "name": "Placeholder",
+      "interface": "text-input",
+      "length": 200
+    },
+    "trim": {
+      "name": "Trim",
+      "interface": "toggle",
+      "default": true
+    },
+    "showCharacterCount": {
+      "name": "Show character count",
+      "interface": "toggle",
+      "default": true
+    },
+    "iconLeft": {
+      "name": "Icon left",
+      "interface": "icon",
+      "advanced": true
+    },
+    "iconRight": {
+      "name": "Icon right",
+      "interface": "icon",
+      "advanced": true
+    },
+    "formatValue": {
+      "name": "Format value",
+      "interface": "toggle",
+      "default": false
+    },
+    "monospace": {
+      "name": "Monospace",
+      "interface": "toggle",
+      "default": false
+    }
+  }
+}
